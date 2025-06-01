@@ -71,7 +71,7 @@ This folder shows my learning journey of the JavaScript programming language.
 **[1. JavaScript basics](https://github.com/WindJammer6/33.-Networks-Internet-World-Wide-Web-HTML-CSS-JavaScript-Learning/tree/main/4.%20JavaScript%20learn/1.%20JavaScript%20basics) <a name = "jsbasics"></a>**  
 This folder contains all the JavaScript files that deals with the basic syntax and structure in the JavaScript programming language.
 
-**[2. JavaScript OOP](https://github.com/WindJammer6/16.-Csharp-and-Unity-Learning/tree/main/C%23%20learn%20code%20archives/3.%20C%23%20OOP) <a name = "jsoop"></a>**  
+**[2. JavaScript OOP](https://github.com/WindJammer6/33.-Networks-Internet-World-Wide-Web-HTML-CSS-JavaScript-Learning/tree/main/4.%20JavaScript%20learn/2.%20JavaScript%20OOP) <a name = "jsoop"></a>**  
 This folder contains all the JavaScript files that deals with Object-Oriented Programming (OOP) concept in the JavaScript programming language.
 
 **['What_is_Nodejs.txt' text file](https://github.com/WindJammer6/33.-Networks-Internet-World-Wide-Web-HTML-CSS-JavaScript-Learning/blob/main/4.%20JavaScript%20learn/What_is_Nodejs.txt) <a name = "whatisnodejs"></a>**  
