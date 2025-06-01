@@ -120,7 +120,7 @@ Database)
 
 <br>
 
-## [3. 'Setting_up_MySQL_(SQL_implementation)_in_VScode.txt' text file)](https://github.com/WindJammer6/23.-SQL-learn-with-MySQL-SQL-implementation-/blob/main/Setting_up_MySQL_(SQL_implementation)_in_VScode.txt) <a name = "setupmysqlinvscode"></a>
+## [5. 'Setting_up_HTML_CSS_JavaScript_in_VScode_and_running_HTML_CSS_JavaScript_code_in_VScode.txt' text file](https://github.com/WindJammer6/33.-Networks-Internet-World-Wide-Web-HTML-CSS-JavaScript-Learning/blob/main/Setting_up_HTML_CSS_JavaScript_in_VScode_and_running_HTML_CSS_JavaScript_code_in_VScode.txt) <a name = "howsetuphtmlcssjsandruninvscode"></a>
 This file contains instructions on how to set up MySQL (SQL implementation) with VS code, such as how to download MySQL (SQL implementation) from the MySQL (SQL implementation) official website: https://www.mysql.com/downloads/, create a MySQL (SQL implementation) server in MySQL Workbench, a MySQL-specific MySQL (SQL implementation) server management tool/IDE/application, and establish a connection link between the created MySQL (SQL implementation) server in MySQL Workbench to VS code.
 
 *Source(s):*  
@@ -128,13 +128,4 @@ This file contains instructions on how to set up MySQL (SQL implementation) with
 + https://youtu.be/Rm0xH2Vpfi0?si=QVr3mUdqUGLHN84R (Youtube video by codebasics, titled: 'SQL Tutorial for Beginners | MySQL Tutorial')
 + https://guidingcode.com/use-mysql-with-visual-studio-code/ (GuidingCode) 
 + https://superuser.com/questions/1438960/error-er-supported-auth-mode-client-does-not-support-authentication-protocal-r (superuser discussion on: 'Error: ER_SUPPORTED_AUTH_MODE: Client does not support authentication protocal requested by server consider upgrading MySQL client')
-
-<br>
-
-## [5. 'Setting_up_HTML_CSS_JavaScript_in_VScode_and_running_HTML_CSS_JavaScript_code_in_VScode.txt' text file](https://github.com/WindJammer6/33.-Networks-Internet-World-Wide-Web-HTML-CSS-JavaScript-Learning/blob/main/Setting_up_HTML_CSS_JavaScript_in_VScode_and_running_HTML_CSS_JavaScript_code_in_VScode.txt <a name = "howsetuphtmlcssjsandruninvscode"></a>
-This file contains instructions on how to set up the pre-made 'moviesdb' Relational Database provided by codebasics in their Youtube video, titled 'SQL Tutorial for Beginners | MySQL Tutorial' (link: https://youtu.be/Rm0xH2Vpfi0?si=QVr3mUdqUGLHN84R) in a MySQL (SQL implementation) server in MySQL Workbench, a MySQL-specific MySQL (SQL implementation) server management tool/IDE/application, and how to run a MySQL (SQL implementation) file in VS code.
-
-*Source(s):*  
-+ https://youtu.be/Rm0xH2Vpfi0?si=QVr3mUdqUGLHN84R (Youtube video by codebasics, titled: 'SQL Tutorial for Beginners | MySQL Tutorial')
-+ https://guidingcode.com/use-mysql-with-visual-studio-code/ (Guidingcode)
 
