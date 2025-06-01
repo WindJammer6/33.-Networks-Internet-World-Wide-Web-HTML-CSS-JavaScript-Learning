@@ -4,6 +4,8 @@ I wanted to officially learn HTML, CSS and JavaScript programming languages, but
 Turns out what I was missing was about the general understanding about Networks. Since HTML, CSS and JavaScript are programming languages for the World Wide Web, and the World Wide Web is an application on top of the Internet, which is made up of
 Networks, I found it helpful to get some general understanding about Networks, the Internet and the World Wide Web, before diving into learning HTML, CSS and JavaScript programming languages.
 
+IDE used: [VSCode](https://code.visualstudio.com/)
+
 <br>
 
 ## Table of Contents:
