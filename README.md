@@ -72,8 +72,8 @@ This folder contains all the JavaScript files that deals with the basic syntax a
 **[2. JavaScript OOP](https://github.com/WindJammer6/16.-Csharp-and-Unity-Learning/tree/main/C%23%20learn%20code%20archives/3.%20C%23%20OOP) <a name = "jsoop"></a>**  
 This folder contains all the JavaScript files that deals with Object-Oriented Programming (OOP) concept in the JavaScript programming language.
 
-**['What_is_Nodejs.txt' text file](https://github.com/WindJammer6/16.-Csharp-and-Unity-Learning/blob/main/C%23%20learn%20code%20archives/Setting_up_C%23_in%20VScode.txt) <a name = "settingupcsharpinvscode"></a>**  
-This file contains information from the Youtube video on how to set up a C# environment in VS code, and how to use it to run C# code in VS code. (link: https://www.youtube.com/watch?v=CO4BGZOuUkM (Tech Decode Tutorials))
+**['What_is_Nodejs.txt' text file](https://github.com/WindJammer6/33.-Networks-Internet-World-Wide-Web-HTML-CSS-JavaScript-Learning/blob/main/4.%20JavaScript%20learn/What_is_Nodejs.txt) <a name = "whatisnodejs"></a>**  
+This file contains information about the common confusion about what exactly is Node.js.
 
 
 *Source(s):*  
@@ -83,11 +83,9 @@ This file contains information from the Youtube video on how to set up a C# envi
 <br>
 
 ## [5. 'Setting_up_HTML_CSS_JavaScript_in_VScode_and_running_HTML_CSS_JavaScript_code_in_VScode.txt' text file](https://github.com/WindJammer6/33.-Networks-Internet-World-Wide-Web-HTML-CSS-JavaScript-Learning/blob/main/Setting_up_HTML_CSS_JavaScript_in_VScode_and_running_HTML_CSS_JavaScript_code_in_VScode.txt) <a name = "howsetuphtmlcssjsandruninvscode"></a>
-This file contains instructions on how to set up MySQL (SQL implementation) with VS code, such as how to download MySQL (SQL implementation) from the MySQL (SQL implementation) official website: https://www.mysql.com/downloads/, create a MySQL (SQL implementation) server in MySQL Workbench, a MySQL-specific MySQL (SQL implementation) server management tool/IDE/application, and establish a connection link between the created MySQL (SQL implementation) server in MySQL Workbench to VS code.
+This file contains instructions on how to set up and run HTML, CSS and JavaScript in VS code.
 
 *Source(s):*  
-+ https://www.mysql.com/downloads/ (MySQL)
-+ https://youtu.be/Rm0xH2Vpfi0?si=QVr3mUdqUGLHN84R (Youtube video by codebasics, titled: 'SQL Tutorial for Beginners | MySQL Tutorial')
-+ https://guidingcode.com/use-mysql-with-visual-studio-code/ (GuidingCode) 
-+ https://superuser.com/questions/1438960/error-er-supported-auth-mode-client-does-not-support-authentication-protocal-r (superuser discussion on: 'Error: ER_SUPPORTED_AUTH_MODE: Client does not support authentication protocal requested by server consider upgrading MySQL client')
++ https://www.youtube.com/watch?v=bEIkw5dG-E4&t=270s (HMA WebDesign) (YouTube video by HMA WebDesign titled, 'How To Run JavaScript Program in Visual Studio Code | VSCode Terminal Not Working')
++ https://datatas.com/how-to-run-html-css-and-javascript-in-visual-studio-code/ (DATATAS)
 
