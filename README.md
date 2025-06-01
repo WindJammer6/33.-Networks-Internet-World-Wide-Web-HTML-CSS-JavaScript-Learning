@@ -76,47 +76,39 @@ This file contains the Microsoft Excel file, that illustrates/visualises the 'mo
 <br>
 
 ## [2. HTML learn](https://github.com/WindJammer6/33.-Networks-Internet-World-Wide-Web-HTML-CSS-JavaScript-Learning/tree/main/2.%20HTML%20learn) <a name = "html"></a> ![My Skills](https://go-skill-icons.vercel.app/api/icons?i=html)
-This is the file that explains a comprehensive background of the SQL programming language, how it is related to Databases, the types of Databases, their respective Database Management Systems (DBMS), and the different types of SQL implementations (including MySQL (SQL implementation), etc.
+This folder shows my learning journey of the HTML programming language.
 
 *Source(s):*  
-+ https://www.geeksforgeeks.org/what-is-sql/ (GeekforGeeks) (for what is SQL)
-+ https://learnsql.com/blog/what-is-sql-query/ (LearnSQL) (for what is a SQL query)
-+ https://www.geeksforgeeks.org/what-is-database/ (GeekforGeeks) (for what is a Database)
-+ https://www.geeksforgeeks.org/what-is-database/ (GeekforGeeks) (for the different types of databases)
-+ https://www.geeksforgeeks.org/introduction-to-nosql/ (GeekforGeeks) (for the definition of NoSQL Database)
-+ https://blog.leanxcale.com/distributed-database-concepts/newsql-databases/ (Leanxcale) (for the definition of NewSQL
-Database)
-+ https://www.geeksforgeeks.org/what-is-mysql/ (GeekforGeeks) (for what is MySQL (SQL implementation))
++ https://chat.openai.com/ (ChatGPT)
 
 <br>
 
 ## [3. CSS learn](https://github.com/WindJammer6/33.-Networks-Internet-World-Wide-Web-HTML-CSS-JavaScript-Learning/tree/main/3.%20CSS%20learn) <a name = "css"></a> ![My Skills](https://go-skill-icons.vercel.app/api/icons?i=css)
-This is the file that explains a comprehensive background of the SQL programming language, how it is related to Databases, the types of Databases, their respective Database Management Systems (DBMS), and the different types of SQL implementations (including MySQL (SQL implementation), etc.
+This folder shows my learning journey of the CSS programming language.
 
 *Source(s):*  
-+ https://www.geeksforgeeks.org/what-is-sql/ (GeekforGeeks) (for what is SQL)
-+ https://learnsql.com/blog/what-is-sql-query/ (LearnSQL) (for what is a SQL query)
-+ https://www.geeksforgeeks.org/what-is-database/ (GeekforGeeks) (for what is a Database)
-+ https://www.geeksforgeeks.org/what-is-database/ (GeekforGeeks) (for the different types of databases)
-+ https://www.geeksforgeeks.org/introduction-to-nosql/ (GeekforGeeks) (for the definition of NoSQL Database)
-+ https://blog.leanxcale.com/distributed-database-concepts/newsql-databases/ (Leanxcale) (for the definition of NewSQL
-Database)
-+ https://www.geeksforgeeks.org/what-is-mysql/ (GeekforGeeks) (for what is MySQL (SQL implementation))
-
++ https://chat.openai.com/ (ChatGPT)
+ 
 <br>
 
 ## [4. JavaScript learn](https://github.com/WindJammer6/33.-Networks-Internet-World-Wide-Web-HTML-CSS-JavaScript-Learning/tree/main/4.%20JavaScript%20learn) <a name = "js"></a> ![My Skills](https://go-skill-icons.vercel.app/api/icons?i=javascript)
-This is the file that explains a comprehensive background of the SQL programming language, how it is related to Databases, the types of Databases, their respective Database Management Systems (DBMS), and the different types of SQL implementations (including MySQL (SQL implementation), etc.
+This folder shows my learning journey of the JavaScript programming language.
+
+<br> 
+
+**[1. JavaScript basics](https://github.com/WindJammer6/33.-Networks-Internet-World-Wide-Web-HTML-CSS-JavaScript-Learning/tree/main/4.%20JavaScript%20learn/1.%20JavaScript%20basics) <a name = "jsbasics"></a>**  
+This folder contains all the JavaScript files that deals with the basic syntax and structure in the JavaScript programming language.
+
+**[2. JavaScript OOP](https://github.com/WindJammer6/16.-Csharp-and-Unity-Learning/tree/main/C%23%20learn%20code%20archives/3.%20C%23%20OOP) <a name = "jsoop"></a>**  
+This folder contains all the JavaScript files that deals with Object-Oriented Programming (OOP) concept in the JavaScript programming language.
+
+**['What_is_Nodejs.txt' text file](https://github.com/WindJammer6/16.-Csharp-and-Unity-Learning/blob/main/C%23%20learn%20code%20archives/Setting_up_C%23_in%20VScode.txt) <a name = "settingupcsharpinvscode"></a>**  
+This file contains information from the Youtube video on how to set up a C# environment in VS code, and how to use it to run C# code in VS code. (link: https://www.youtube.com/watch?v=CO4BGZOuUkM (Tech Decode Tutorials))
+
 
 *Source(s):*  
-+ https://www.geeksforgeeks.org/what-is-sql/ (GeekforGeeks) (for what is SQL)
-+ https://learnsql.com/blog/what-is-sql-query/ (LearnSQL) (for what is a SQL query)
-+ https://www.geeksforgeeks.org/what-is-database/ (GeekforGeeks) (for what is a Database)
-+ https://www.geeksforgeeks.org/what-is-database/ (GeekforGeeks) (for the different types of databases)
-+ https://www.geeksforgeeks.org/introduction-to-nosql/ (GeekforGeeks) (for the definition of NoSQL Database)
-+ https://blog.leanxcale.com/distributed-database-concepts/newsql-databases/ (Leanxcale) (for the definition of NewSQL
-Database)
-+ https://www.geeksforgeeks.org/what-is-mysql/ (GeekforGeeks) (for what is MySQL (SQL implementation))
++ https://www.youtube.com/watch?v=PkZNo7MFNFg (freeCodeCamp.org) (YouTube video by freeCodeCamp.org titled, 'Learn JavaScript - Full Course for Beginners')
++ https://www.youtube.com/watch?v=q-xS25lsN3I&t=121s (Code ON 코드온) (YouTube video by Code ON 코드온 titled, 'What is Node.js and how it works (explained in 2 minutes)')
 
 <br>
 
