@@ -1,0 +1,457 @@
+Layers of Networking/Internet and the Open Systems Interconnection (OSI) layer model
+Over the years, there have been many different layer models that describe how the communication over a 
+network/Internet work, to ensure functionality and interoperability between nodes. But here, I would 
+like to focus on the OSI layer model, which breaks down the Internet architecture into 7 layers.
+
+(Note: I know there is another popular layer model called the Transmission Control Protocol/Internet Protocol 
+(TCP/IP) layer model, which is a 4 layer model and is a concise version of the OSI Model. However, I would
+like to explore more exhaustively, hence I decided to focus on the OSI layer model, a 7 layer model instead)
+
+
+The OSI layer model of the Networking/Internet
+   You can view a diagram of the OSI layer model of the Networking/Internet here:
+   https://i.pinimg.com/originals/3e/53/42/3e534245a610e82dd09bf17e5c828c84.jpg
+
+                           Application Layer
+                                 ^
+                                 |
+                                \ /
+                           Presentation Layer
+                                 ^
+                                 |
+                                \ /
+                           Session Layer
+                                 ^
+                                 |
+                                \ /
+                           Transport Layer
+                                 ^
+                                 |
+                                \ /
+                           Network Layer
+                                 ^
+                                 |
+                                \ /
+                           Data Link Layer
+                                 ^
+                                 |
+                                \ /
+                           Physical Layer
+
+
+A brief explanation of each of the 7 layers in the OSI layer model (from highest to lowest):
+1. Application Layer - it is where the user interacts with the software application, which is communicating
+                       with the network. Hence, the Application layer provides services for network applications
+                       (e.g. Google Chrome, Firefox, Outlook, Skype, etc.)
+
+                       There are various network protocols in this layer, which enables various functions in this
+                       layer, common ones include:
+                        a. HTTP (HyperText Transfer Protocol)         – Transfers web pages and other resources from a web 
+                                                                        server to a browser.
+                        b. HTTPS (HyperText Transfer Protocol Secure) – Securely transfers encrypted web content 
+                                                                        using SSL/TLS over HTTP.
+                        c. FTP (File Transfer Protocol)               – Uploads and downloads files between a client and a 
+                                                                        file server.
+                        d. NFS (Network File System)                  – Allows remote file access over a network 
+                                                                        as if on a local disk.
+                        e. FMTP (Flight Message Transfer Protocol)    – Used in aviation systems for transferring 
+                                                                        flight plan and meteorological data.
+                        f. DHCP (Dynamic Host Configuration Protocol) – Dynamically assigns IP addresses and network 
+                                                                        settings to devices.
+                        g. SNMP (Simple Network Management Protocol)  – Monitors and manages network devices like 
+                                                                        routers and switches.
+                        h. SMTP (Simple Mail Transfer Protocol)       - Used for sending and receiving email messages
+                        i. TELNET (Telecommunication Network)         – Provides text-based command-line (virtual terminal)
+                                                                        remote access to computers and devices.
+                        j. POP3 (Post Office Protocol version 3)      – Retrieves email messages from a mail server 
+                                                                        to a local email client.
+                        k. IRC (Internet Relay Chat)                  – Facilitates real-time group or private text chat over 
+                                                                        the Internet.
+                        l. NNTP (Network News Transfer Protocol)      – Transfers and retrieves newsgroup posts 
+                                                                        and messages on Usenet.
+                        m. DNS (Domain Name System)                    - Lets applications resolve domain names into IP addresses.
+                        etc.
+                       
+   (Note: Network applications refer to software that runs over/relies on a computer network/Internet connection.
+          Example of applications that are not network applications involved offline applications (e.g. Notepad, 
+          Microsoft Excel (offline) or Minecraft (offline), which are applications that do not require a computer 
+          network/Internet connection.))
+
+
+
+2. Presentation Layer - receives data in the form of strings and numbers from the Application layer, and has 3 main
+                        functionalities:
+                        -> Translation: converts received data, in the form of strings and numbers from the Application 
+                           layer, into binary format (for the machine to understand). E.g. from ASCII to EBCDIC (Extended 
+                           Binary Coded Decimal Interchange Code)
+
+                        -> Data Compression: Reduces the number of bits used to represent the original data, to save 
+                           transmission time (via some algorithm).
+
+                        -> Encryption: enhances the security of the data (via cryptography algorithms). At the sender
+                           side, the data is encrypted, and the receiver side, the data is decrypted
+                       
+                        There are various network protocols in this layer, which enables various functions in this
+                        layer, common ones include:
+                        a. TLS (Transport Layer Security)               – Encrypts data to provide secure communication 
+                                                                          over a network, used in HTTPS, SMTP, etc.
+                        b. SSL (Secure Sockets Layer)                   – Older encryption protocol for secure communication, 
+                                                                          now largely replaced by TLS.
+                        c. MIME (Multipurpose Internet Mail Extensions) – Encodes multimedia email content (text, images, 
+                                                                        audio) for transmission via SMTP.
+                        d. JPEG (Joint Photographic Experts Group)      – Compresses and encodes digital image data 
+                                                                          for efficient transmission.
+                        e. MPEG (Moving Picture Experts Group)          – Compresses and encodes video and audio 
+                                                                          for streaming and storage.
+                        f. MP3 (MPEG Audio Layer III)                   – Compresses digital audio data using lossy 
+                                                                          compression for streaming and storage.
+                        g. MP4 (MPEG-4 Part 14)                         – A multimedia container format that stores 
+                                                                         compressed video, audio, subtitles, and metadata 
+                                                                         for efficient streaming and playback.
+                        h. ASCII (American Standard Code for Information Interchange) – Encodes characters as binary 
+                                                                                        for text data communication.
+                        i. EBCDIC (Extended Binary Coded Decimal Interchange Code)    – IBM-specific character encoding 
+                                                                                        used in mainframe systems.
+                        j. Unicode (UTF-8)                              – Encodes text in a universal character set to support 
+                                                                          multiple languages and scripts.
+                        k. XDR (External Data Representation)           – Standardizes data formats for transmission between 
+                                                                          different systems.
+                        etc.
+
+
+
+3. Session Layer - responsible for handling sessions/connections between 2 computers (which enables the sending and receiving of data). 
+                   It has 5 main functionalities:
+                   -> Starting a sessions/connections
+
+                   -> Terminating a sessions/connections
+
+                   -> Authentication: Just before starting a session/connection, the Session Layer performs Authentication, which 
+                      asks the Client 'Who you are?', which it does so by asking for the Client's personal information like the 
+                      username and password. If Authentication is successful, the session/connection will be created between the 
+                      Client and the Server.
+
+                   -> Authorization: After Authentication, the process of Authorization is done, which checks if the Client has 
+                      permission to access a file. If you are not Authorized, you will get a message 'You are not authorized to
+                      access this page!' (or sth along those lines)
+
+                   -> Session Management: The Session Layer also helps in session management. 
+                   
+                      For example, a web browser consists of datas such as image and texts, which are stored in seperate files in 
+                      the web browser (Server) like in an image file and text file seperately.
+
+                      When a Client requests for a website in the web browser (Server), the web browser (Server) opens a seperate 
+                      session/connection to the Client to download these image file and text file seperately. These files are 
+                      received in the form of data packets. Session layer keeps track on which data packet belongs to which 
+                      file (the image file of text file), and controls where these files go, which in this case, will be the
+                      requested website by the Client.
+
+                   There are various network protocols in this layer, which enables various functions in this
+                   layer common ones include:
+                   a. RPC (Remote Procedure Call Protocol)       – Allows a program to execute a procedure (function) 
+                                                                   on a remote server as if it were local.
+                   b. PPTP (Point-to-Point Tunneling Protocol)   – Enables secure tunneling of data for VPN connections 
+                                                                   over IP networks.
+                   c. SCP (Session Control Protocol)             – Manages and controls multimedia sessions 
+                                                                   in network communications (used in conferencing systems).
+                   d. SDP (Session Description Protocol)         – Describes multimedia communication sessions for 
+                                                                   the purpose of session announcement, invitation, and 
+                                                                   parameter negotiation.
+
+   (Note: 
+   - What is an API?
+     An API (Application Programming Interface) is a set of rules and tools that allows software programs to communicate.
+
+    - APIs may use services provided by the Session Layer, but an API itself is not part of the OSI model.
+      Instead, APIs help applications establish and manage sessions — the main job of the Session Layer.
+
+      For example:
+      -> 'fetch()' in JavaScript to retrieve web data
+      -> Python’s requests library to call REST APIs
+      -> HTTP-based APIs like https://api.weather.com
+   )
+                                                      
+
+
+4. Transport Layer - controls the reliability of communication between 2 computers through its 3 
+                     functionalities:
+                     -> Segmentation: involves the segmentation of data message being sent to a form of 
+                        data unit called data segments, which contains various information of the data including:
+                        => Raw data
+                        => Port number - used to identify which application/service the data belongs to on 
+                                         a device
+                        => Sequence number - keeps track of the order of data segments so the receiver 
+                                             can reassemble them correctly.
+
+                     -> Flow Control: it controls the rate of amount of data being transmitted at a given
+                        time.
+
+                        For example, suppose you have a computer (Server) that can transfer data at the 
+                        maximum rate at 100Mb/s but a phone (Client) an only receive data a the maximum 
+                        rate of 10Mb/s. When we try to download a file in our phone (Client) from the
+                        computer (Server), the computer (Server) starts sending data at 50Mb/s, which
+                        is more than the maximum rate of 10Mb/s our phone (CLient) can handle. So the
+                        Transport Layer helps the phone (CLient) to be able to tell the 
+                        computer (Server) to slow down the transfer rate from 50Mb/s to 10Mb/s so that
+                        no data gets lost.
+
+                        Similarly, if the computer (Server) starts sending data at 5Mb/s, the
+                        Transport Layer helps the phone (CLient) to be able to tell the 
+                        computer (Server) to increase the transfer rate from 5Mb/s to 10Mb/s so to
+                        increase performance.        
+
+                     -> Error Control: If some data segments does not arrive/corrupted at the destination, 
+                        the Transport Layer uses the Automatic Repeat Request scheme to 
+                        retransmit the corrupted/lost data segments.
+
+                        A group of bits is added to each data packet called 'Checksum' by the Transport 
+                        Layer/Network Layer for it to identify and check for corrupted/lost data segments
+
+                   There are various network protocols in this layer, which enables various functions in this
+                   layer common ones include:
+                   a. TCP (Transmission Control Protocol) – Provides reliable, connection-oriented data 
+                                                            transmission with error checking and retransmission.
+                   b. UDP (User Datagram Protocol)        – Offers fast, connectionless data transmission 
+                                                            without error recovery or acknowledgment.
+
+                  (Note: These 2 protocols correspond to the 2 different types of services that the Transport
+                   Layer provides:
+                   - TCP for Connection-oriented Transmission, slower than UDP, used in cases where it matters
+                     if we received full data, e.g. Internet, Email, FTP
+                   - UDP for Connectionless Transmission, faster than TCP, used in cases where it does not
+                     matter if we received full data, e.g. Streaming movies, songs, games, TFTP, DNS
+                   )
+
+
+   Current data unit form illustration: 
+   Segment
+   [Raw data + Port number + Sequence number + Checksum]
+
+
+
+
+5. Network Layer - data segments from the Transport Layer is passed into the Network Layer, where the data unit
+                   here are called data packets. It ensures that data packets can be sent between 2 computers that
+                   are not on the same network (both are not on the same local network (i.e. data packets can be
+                   sent between the 2 computers without a router)). It does so through its 3 functionalities:
+                   -> Logical Addressing: Every computer has a unique IP address. This process is the addition
+                      of information of the source computer's IP address and destination computer's IP address to the
+                      data segment from the Transport Layer, which makes the new data unit in the Network Layer 
+                      a data packet.
+
+                      There are 2 ways to write an IP address (called Masking), in IPv4 masking and IPv6 masking:
+                      Masking          | IPv4                                 | IPv6                         
+                      Address format   | 32-bit (e.g., `192.168.1.10`)        | 128-bit (e.g., `2001:0db8:abcd:0012:0000:0000:0000:0001`)
+                      Masking style    | Subnet mask (e.g., `255.255.255.0`)  | Prefix length (e.g., `/64`)  
+                      Meaning          | First 3 octets (192.168.1) = Network | First 64 bits = Network
+                                       | Last octet (.10) = Host              | Last 64 bits = Host
+
+                   -> Routing: It is the method of moving the data packet from the source computer to the
+                      destination computer.
+                      For example (using IPv4 masking),
+                                          +----------------------------+
+                                          |   Facebook Server Network  |
+                                          |   IP: 192.168.3.1          |
+                                          |   Mask: 255.255.255.0      |
+                                          +-------------+--------------+
+                                                        |
+                                                   (Packet sent)
+                                                        |
+                              +-------------------------+------------------------+
+                              |                                                  |
+                     +--------------+                                 +---------------+
+                     |   Network 1  |                                 |   Network 2   |
+                     |  192.168.1   |                                 |  192.168.2    |
+                     +-------+------+                                 +--------+------+
+                              |                                                |
+                         +----+------+                                    +----+------+
+                         | Laptop A  |                                    | Laptop B  |
+                         |192.168.1.1|                                    |192.168.2.1|
+                         +-----------+                                    +-----------+
+
+                      Assume we have 2 computers, Laptop A and Laptop B, as well as a server all on different networks (as
+                      seen from the different networks read from the IP address's network of 192.168.1, 192.168.2, 192.168.3).
+
+                      Laptop B makes a request from the Facebook Server, and hence, the Facebook Server sends a data packet
+                      with the attached source computer's IP address of its own IP address, 192.168.3.1 and the destination
+                      computer's IP address of Laptop B, 192.168.2.1. Based on the attached destination IP addresses, this data 
+                      packet will be first sent to Network 2, with the IP address of 192.168.2, then to Laptop B, 192.168.2.1.
+
+                   -> Path Determination: a computer is connected to another computer in a number of ways, linked via nodes,
+                      particularly, routers. Recall that routers are basically specialised computers that is designed to 
+                      efficiently forward data between networks. Even though your laptop can technically be made as a router, 
+                      don't worry, other people's data packets won't pass through your laptop since it isn't programmed to be 
+                      a router. Here are the types of routers infrastructure that exists and how a data packet is typically
+                      passed from a source computer to a destination computer:
+                      Step   | Device                                  | Description                                                            
+                        1    | Your device (e.g., laptop)              | Sends data to your home router                                         
+                        2️    | Home Router                             | Forwards it to your Internet Service Provider (ISP)                
+                        3️    | Internet Service Provider (ISP) Routers | Your ISP has many routers that forward the packet toward the destination                            
+                        4️    | Regional/National Internet Routers      | These belong to larger backbone providers or data centers (e.g., Google, Cloudflare)            
+                        5️    | Destination Network's Router            | Eventually reaches the target server (e.g., google.com), whose router sends it to the final machine
+                     Reverse | Reverse Path                            | The reply follows the reverse path, hopping back through routers to your device    
+
+                      The Network Layer uses various protocols such as OSPF, BGP and IS-IS to determine the optimal path between
+                      the nodes from the source computer to destination computer.
+
+                      There are various network protocols in this layer, which enables various functions in this
+                      layer common ones include:
+                      a. IP (Internet Protocol)                     – Delivers packets across networks by assigning 
+                                                                      source and destination IP addresses (IPv4/IPv6).
+                      b. ICMP (Internet Control Message Protocol)   – Sends error messages and operational information, 
+                                                                      such as "host unreachable" or "ping" requests.
+                      c. IGMP (Internet Group Management Protocol)  – Manages membership in multicast groups 
+                                                                      for streaming or conferencing.
+                      d. OSPF (Open Shortest Path First)            – Uses link-state routing to determine the 
+                                                                      shortest path between routers within a network.
+                      e. BGP (Border Gateway Protocol)              – Manages routing between autonomous systems 
+                                                                      on the Internet (used by ISPs and large networks).
+                      f. IS-IS (Intermediate System to Intermediate System) – A routing protocol used in large service 
+                                                                              provider networks for interior gateway routing.
+                      etc.
+
+
+   Current data unit form illustration: 
+   Segment
+   [Raw data + Port number + Sequence number + Checksum]
+
+   Packet
+   [Source IP address][Destination IP address][Segment]
+
+
+
+
+6. Data Link Layer - data packets from the Network Layer is passed into the Data Link Layer, where the data unit
+                     here are called data frames. 
+                     
+                     It ensures that data frames can be sent between 2 computers ((data) link) in the same local network through a 
+                     media ('media' in this context refer to physical form, which could be wires/cables, optical wires
+                     or Wi-Fi in the air). It does so through its 3 functionalities:
+                     -> Physical Addressing: Every computer has a unique Media Access Control (MAC) address. This 
+                        process is the addition of information of the source computer's MAC address and destination 
+                        computer's MAC address to the data packet from the Network Layer, which makes the new data 
+                        unit in the Data Link Layer a data frame.
+
+                        A MAC address is meaningful only on the local (data) link. (We will explore more about this
+                        in the next point)
+
+                        A MAC address is written like so: 
+                        Address format   | 48-bit (e.g., `00:1A:2B:3C:4D:5E`)
+                        Meaning          | First 3 bytes (00:1A:2B) = OUI (Organizationally Unique Identifier), identifies the manufacturer 
+                                         |                            (e.g., Intel, Apple, Cisco)
+                                         | Last 3 bytes (.10) = NIC-specific, assigned uniquely by the manufacturer
+
+                        The MAC address lives in the Network Interface Card (NIC) of the device, which is basically
+                        a certain hardware in all modern devices.
+
+                                       
+                     -> Allows higher layers to access the media via framing:
+                        For example,
+                                                      [Satellite]
+                                                           |
+                              ---------------------------------------------------------
+         [H2][Packet][T2]     |                                                       |   [H3][Packet][T3]
+                              |                                                       |
+                  [Radio Station 1] (Network 1) <-----IP address-------> [Radio Station 2] (Network 2)
+                              |         ^                                      ^      |
+         [H1][Packet][T1]     |         | MAC address              MAC address |      |
+                 [Laptop 1](Network 1) \ /                                    \ /  [Laptop 2] (Network 2)
+
+                        (Note: 'H' stands for Header, and 'T' stands for Tail)
+
+                        While the IP address allows the data frame to be transferred between different networks, the 
+                        MAC address allows the data frame to be transferred between a single link within a network.
+
+                        Flowchart of whats happening:
+                        Hop                       | What Happens                                                             | MAC Address Used                                          
+                        1. PC → R1 (router)       | PC sends an Ethernet frame directly to R1                                | Src = PC’s MAC, Dst = R1’s MAC                     
+                        2. Inside R1              | R1 removes the MAC info (Ethernet header/trailer), keeps the IP packet   | (No MACs used inside here)                                   
+                        3. R1 → Satellite         | R1 adds a new frame for the satellite link (different format!)           | Src = R1’s satellite MAC, Dst = R2’s satellite MAC 
+                        4. Through satellite hops | Each satellite device updates the MAC addresses for the next hop         | MACs change at every hop                                 
+                        5. R2 → Laptop            | R2 makes a new Ethernet frame for the final delivery                     | Src = R2’s MAC, Dst = Laptop’s MAC                 
+                        6. Laptop                 | Laptop receives the frame, removes the MAC info, and keeps the IP packet | (MAC addresses are stripped off)      
+
+                        Notice that from the transfer from one (data) link to another within the same network, the MAC
+                        addresses stored in the data frame is used, then deconstructed and reconstructed to new pairs
+
+                     -> Controls how data is placed and recevived from the media via:
+                        => Media Access Control (MAC) Address / Physical Addressing: The Data Link Layer is
+                           responsible for getting data frames on and off the media in a (data) link
+                        => Error Detection: There may be a case where there are 2 or more devices connected
+                           to the same media. And there may be a possibility of a error collision if 2 or more
+                           of them sends data to the media at the same time resulting in a useless message
+                           being generated in the media.
+
+                           To avoid this situation, the Data Link Layer keeps an eye/monitors the media when
+                           it is free so that devices on the same media can transmit data without error
+                           collision. It does so via the Carrier Sense Multiple Access (CSMA) protocol.
+
+                           The CSMA protocol detects error by adding additional information to the data frame at 
+                           the tail called the Frame Check Sequence (FCS), which allows the CSMA protocol to 
+                           detect errors when there is an error collision.
+
+
+                     No network protocols for this layer.
+
+
+   Current data unit form illustration: 
+   Segment
+   [Raw data + Port number + Sequence number + Checksum]
+
+   Packet
+   [Source IP address][Destination IP address][Segment]
+
+   Frame
+   [Header = Source MAC + Destination MAC][Packet][Tail = FCS]
+
+
+
+7. Physical Layer - responsible for the actual physical connection between the devices. The Physical Layer 
+                    converts the data from the abstract form of bits, into physical form.
+
+                    Common Physical Layer devices are:
+                    -> Physical form - Electrical signals via wires/cables
+                    -> Physical form - Light signals via optical wires
+                    -> Physical form - Radio wave signals via Wi-Fi in the air
+                    
+                    No network protocols for this layer.
+
+
+   Current data unit form illustration: 
+   Segment
+   [Raw data + Port number + Sequence number + Checksum]
+
+   Packet
+   [Source IP address][Destination IP address][Segment]
+
+   Frame
+   [Header = Source MAC + Destination MAC][Packet][Tail = FCS]
+
+   Bits
+   1000101010010101010101010101
+
+
+
+Source(s):
+- https://www.youtube.com/watch?v=vv4y_uOneC0&t=2s (TechTerms) (YouTube video by TechTerms titiled, 
+  'OSI Model Explained | OSI Animation | Open System Interconnection Model | OSI 7 layers | TechTerms')
+- https://www.geeksforgeeks.org/open-systems-interconnection-model-osi/ (GeekforGeeks)
+
+
+(Note: 
+- What is a node in Networks?
+  Network nodes are the physical pieces that make up a network. They usually include any 
+  device that both receives and then communicates information, or receive and store the 
+  data, relay the information elsewhere (i.e. routers), or create and send data instead.
+
+  For example, a computer node might back up files online or send an email, but it can 
+  also stream videos and download other files. A network printer can receive print requests 
+  from other devices on the network, while a scanner can send images back to the computer. 
+  A router determines which data goes to which devices that request file downloads within 
+  a system, but it can also send requests out to the public network/internet.
+
+- A router is a specialised computer that is designed to efficiently forward data between networks.
+
+
+Source: https://www.lifewire.com/what-is-a-node-4155598 (Lifewire)
+)

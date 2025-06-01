@@ -1,0 +1,467 @@
+What is Hypertext Transfer Protocol (HTTP)? (from the Application Layer)
+It is a protocol that standardizes how Clients (a computer) and Servers 
+(a computer) intercommunicate data (e.g. images, videos, audios, documents, etc.)
+
+It is a TCP/IP based protocol.
+
+Recall in the TCP/IP based protocol (see the '4. What_are_TCP_UDP_IP_protocols.txt' file),
+transfer of information, aka the 'virtual information envelope'. So HTTP defines what type
+of information goes into these envelopes at the Application Layer (apart from the IP addresses, 
+Port number and Sequence number which gets added at the Transport Layer)
+
+For HTTP to work, the Client and Server computer must both be communicating
+via HTTP.
+
+
+
+
+There are 3 important functionalities of HTTP:
+1. HTTP is connectionless: after making the request, the Client disconnect from the Server,
+   then when the response is ready the Server re-establish the connection again and deliver the response
+2. The HTTP can deliver any sort of data, as long as the two computers are able to read it.
+3. The HTTP is a stateless: The Client and Server know about each other just during the current 
+   request, if it closes, and the 2 computers want to connect again, they need to provide information 
+   to each other anew, and the connection is handled as the very first one.
+
+
+
+
+The Request-Response Cycle:
+Using an example of this with the World Wide Web, 
+
+
+             o                                The Internet                          |------------|
+            /|\  _|   ----------------------------------------------------------    | Web Server |
+            / \                                                                     |------------|
+    [web browser (Client)]
+
+(www.example.com/prodicts/myproduct.html)
+
+lets say you have a web browser (Client) and a web Server. A Client wants to see a website,
+e.g. www.example.com/prodicts/myproduct.html, and hence the Client types in the URL of the website
+using the Client program, typically a web browser, but first the web browser (Client) and the web Server
+needs to be physically connected.
+
+This is the job of the Internet, which establishes that connection using a combination of media to prepare
+the session/connection for the 2 computers to communicate via the HTTP protocol (see how this is done via
+the OSI model in the '2. What_is_the_OSI_layer_model,txt' file).
+
+1. Once this session/connection is established, the Client then can send a Request (in the form of a 
+   HTTP message) to the Server. Because HTTP is connectionless, after doing so it disconnects from the 
+   Server waiting for the Response (in the form of a HTTP message).
+2. The Server then processes the Request (in the form of a HTTP message), prepares the Response via some 
+   program, re-establishes the another session/connection, and sends back the Response (in the form of a 
+   HTTP message).
+
+
+(Note: 
+ What is a Uniform Resource Locator (URL)?
+ It is known as the address of a resource on the Internet, but it is most commonly used in the World 
+ Wide Web. 
+
+ For example (an example of a full URL),
+        https://www.example.com/folder/file.html?id=5&lang=en#section2
+
+ It is broken down into different parts which provides different information about the address:
+ - Communication Protocol (Application Layer) used (i.e. https): The Communication Protocol (Application Layer) used 
+   (e.g., HTTP, HTTPS, FTP)
+
+ - Full Domain name (i.e. 'www.example.com'):
+   => Domain name: Tells you the organisation that runs the resource (e.g. www.amazon.com, 
+      www.facebook.com, etc.)
+
+   => Subdomain (i.e. 'www'): it is just a prefix added to a domain name to help organize or separate parts of a 
+      organisation's resources/website/service. For example, Google uses subdomains to organise their 
+      resources/website/service, such as 'translate.google.com', 'assistant.google.com', 'play.google.com'.
+
+      The 'www' is just a subdomain name that stands for the World Wide Web, and is traditionally used
+      to represent the main resources/website/service. But it’s not required and is treated just like any other 
+      subdomain.
+
+   => Top-level domain (i.e. '.com'): It indicates the type, purpose or geographical location of a domain.
+      For example,
+      + '.com' stands for commercial
+      + '.edu' stands for educational institutions
+      + '.fr', '.sg', '.uk' stands for France, Singapore and United Kingdom respectively (country-owned)
+      + etc.
+
+ - File path (i.e. '/folder/file.html'): which directs the resources/website/service to a specific page/file 
+   within
+
+ - Port number (optional)	(i.e. :443) (though already implied in HTTPS): Port on the Server to connect to
+   (default is 80 for HTTP, 443 for HTTPS)
+ 
+ - Query parameters	(optional) (i.e. ?id=5&lang=en): Extra arguments sent to the Server, often used in dynamic 
+   web browsers (Client)
+ 
+ - Fragment	(optional) (i.e. #section2): Refers to a specific section within the resource (used by the web 
+   browser (Client))
+)
+
+
+
+
+How does a HTTP message look like?
+A typical HTTP message looks like this, consisting of 3 main sections:
+Typical HTTP message
+        +-----------------------------+
+        |        Start line           |
+        +-----------------------------+
+        |          Headers            |
+        +-----------------------------+
+        |           Body              |
+        +-----------------------------+
+
+
+All 3 main sections contain plain text based information (the Body might contain binary data).
+
+The contents of a HTTP message differs for a Request HTTP message or Response HTTP message:
+Request HTTP message
+        +------------------------------------------------+
+        | Method   path/to/file.ext (URI)   HTTP/version |    Start line 
+        +------------------------------------------------+
+        | Name1: value1                                  |    Headers
+        | Name2: value2                                  |
+        | Name3: value3                                  |
+        | ...                                            |
+        +------------------------------------------------+
+        | E.g. some content (optional body)              |    Body
+        +------------------------------------------------+
+
+E.g.
+        +-----------------------------------------------------------------+
+        | GET   /products/myproduct.html?id=5&lang=en#section2   HTTP/1.0 |    Start line 
+        +-----------------------------------------------------------------+
+        | Host: www.mywebsite.com                                         |    Headers
+        | Accept: text/html                                               |
+        | Accept-language: en-us                                          |
+        | ...                                                             |
+        +-----------------------------------------------------------------+
+        | E.g. some content (optional body)                               |    Body
+        +-----------------------------------------------------------------+
+
+a. Contents of the Start Line in a Request HTTP message:
+- Method: A command that tells the Server what to do (e.g. GET, POST, PUT, DELETE, etc.) 
+  We will see more of this in the 'Additional Information on HTTP and HTTPS' section below.
+- Uniform Resource Identifier (URI) (URLs are a subset of URIs!) : A set of readable characters 
+  (which specifies the path) and a way to locate the resources we are requesting from the Server.                               
+- The HTTP version: specifies the HTTP version so the Server understands the HTTP message
+  (e.g. HTTP/0.9, HTTP/1.0, HTTP/1.1, HTTP/2, HTTP/3, etc.)
+
+b. Contents of the Header in a Request HTTP message:
+- Headers specify some information and rules of the HTTP message. There are a lot of possible 
+  headers, but in this example, we will only be looking at 3 headers.
+  -> Host - specifies to the address of the Server to which we are sending the Request HTTP message
+  -> Accept-Language - specifies the language
+  -> Accept - specifies what type of file we are requesting. It holds a Multipurpose Internet Mail 
+     Extensions (MIME) data type, which is just a label used to identify a type of data. It typically
+     looks has the syntax of: 
+            'fileType / extension'
+     E.g. 
+     => text/html
+     => image/gif
+     => image/png
+
+c. Contents of the Body in a Request HTTP message:
+- Content: Literally any content
+
+
+
+Response HTTP message
+        +------------------------------------------+
+        | HTTP/version         Status code         |    Start line 
+        +------------------------------------------+
+        | Name1: value1                            |    Headers
+        | Name2: value2                            |
+        | Name3: value3                            |
+        +------------------------------------------+
+        | E.g. file requested (optional body)      |    Body
+        +------------------------------------------+
+
+E.g.
+        +--------------------------------------------+
+        | HTTP/1.0  200: OK                          |  Start line
+        +--------------------------------------------+
+        | Host: www.mywebsite.com                    |  Headers
+        | Accept-language: en-us                     |
+        | Accept: text/html                          |
+        +--------------------------------------------+
+        | products/myproduct.html                    |  Body
+        +--------------------------------------------+
+
+a. Contents of the Start Line in a Response HTTP message:
+- Status Code: This code tells the Client if the Request HTTP message succeeded or failed.
+  (e.g. 200: OK, 404: File Not Found etc.) We will see more of this in the 'Additional Information 
+  on HTTP and HTTPS' section below.
+- The HTTP version: specifies the HTTP version so the Server understands the HTTP message
+  (e.g. HTTP/0.9, HTTP/1.0, HTTP/1.1, HTTP/2, HTTP/3, etc.)
+
+b. Contents of the Header in a Response HTTP message:
+- Headers specify some information and rules of the HTTP message. There are a lot of possible 
+  headers, but in this example, we will only be looking at 3 headers.
+  -> Host - specifies to the address of the Server to which we are sending the Request HTTP message
+  -> Accept-Language - specifies the language
+  -> Accept - specifies what type of file we are requesting. It holds a Multipurpose Internet Mail 
+     Extensions (MIME) data type, which is just a label used to identify a type of data. It typically
+     looks has the syntax of: 
+            'fileType / extension'
+     E.g. 
+     => text/html
+     => image/gif
+     => image/png
+
+c. Contents of the Body in a Response HTTP message:
+- Content: Returns the processed content requested by the Client (e.g. it returns the file that the
+  Client requested in the Request HTTP message, which is the 'products/myproduct.html' file in this
+  example)
+
+
+Source(s): 
+- https://www.youtube.com/watch?v=2VauFS071pg (CS50) (YouTube video by CS50 titled, 'CS50 2021 in HDR - 
+  Lecture 8 - HTML, CSS, JavaScript')
+- https://www.youtube.com/watch?v=eesqK59rhGA&t=51s (The TechCave) (YouTube video by 
+  The TechCave titled, 'The Http and the Web | Http Explained | Request-Response Cycle')
+- https://www.youtube.com/watch?v=5Jr-_Za5yQM (LearnFree) (YouTube video by 
+  LearnFree titled, 'The Http and the Web | Http Explained | Request-Response Cycle')
+
+
+///////////////////////////////////////////////////////////////////////
+
+
+What is Hypertext Transfer Protocol Secure (HTTPS)? (from the Application Layer)
+Nowadays however you would see HTTPS more often instead of HTTP for security reasons.
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Additional information on HTTP and HTTPS
+
+
+What are Request HTTP message methods (aka HTTP verbs)?
+Request HTTP message methods are used to indicate the purpose of the Request HTTP message and what 
+is expected if the Request HTTP message is successful.
+
+Here are 4 of the most common Request HTTP message methods:
+1. POST
+2. GET
+3. PUT
+4. DELETE
+
+which satisfies the CRUD operations (Create, Read, Update, Destroy), where,
+1. Create = POST
+2. Read = GET
+3. Update = PUT
+4. Destroy = DELETE
+
+
+1. POST - The POST method submits an entity to the specified resource, often causing a change 
+          in state or side effects on the Server.
+         Request HTTP message Header section syntax:
+                  POST     URI     HTTP/version
+
+         Example POST Request HTTP message:
+                  POST /test HTTP/1.1
+                  Host: example.com
+                  Content-Type: application/x-www-form-urlencoded
+                  Content-Length: 27
+
+                  field1=value1&field2=value2
+
+         Example POST Request HTTP message's Response HTTP message:
+                  HTTP/1.1 201 Created
+                  Content-Type: application/json
+                  Date: Sat, 01 Jun 2025 09:30:00 GMT
+                  Content-Length: 85
+                  Location: /users/12345
+
+                  {
+                    "status": "success",
+                    "message": "User created successfully.",
+                    "userId": "12345"
+                  }
+                                    
+
+2. GET - The GET method requests a representation of the specified resource.
+         Request HTTP message Header section syntax:
+                  GET     URI     HTTP/version
+
+         Example GET Request HTTP message:
+                  GET /contact HTTP/1.1
+                  Host: example.com
+                  User-Agent: curl/8.6.0
+                  Accept: */*
+
+         Example GET Request HTTP message's Response HTTP message:
+                  HTTP/1.1 200 OK
+                  Content-Type: text/html; charset=UTF-8
+                  Date: Fri, 21 Jun 2024 14:18:33 GMT
+                  Last-Modified: Thu, 17 Oct 2019 07:18:26 GMT
+                  Content-Length: 1234
+
+                  <!doctype html>
+                  <!-- HTML content follows -->
+
+
+3. PUT - The PUT method creates a new resource or replaces a representation of the 
+         target resource with the request content.
+         Request HTTP message Header section syntax:
+                  PUT     URI     HTTP/version
+
+         Example PUT Request HTTP message:
+                  PUT /new.html HTTP/1.1
+                  Host: example.com
+                  Content-type: text/html
+                  Content-length: 16
+
+                  <p>New File</p>
+
+         Example PUT Request HTTP message's Response HTTP message:
+         -> If no such existing resource, successful resource created 
+                  HTTP/1.1 201 Created
+                  Date: Sat, 01 Jun 2025 12:00:00 GMT
+                  Content-Type: application/json
+                  Content-Length: 89
+                  Content-Location: /new.html
+                  Server: ExampleServer/1.0
+
+                  {
+                    "status": "created",
+                    "message": "The resource has been created successfully.",
+                    "path": "/new.html"
+                  }
+
+         -> Existing resource found, successfully updated 
+                  (No Body by default with 204: No Content Status Code)
+                  HTTP/1.1 204 No Content
+                  Date: Sat, 01 Jun 2025 12:01:00 GMT
+                  Content-Location: /existing.html
+                  Server: ExampleServer/1.0
+
+                  OR
+
+                  (With Body by default with 200: OK Status Code)
+                  HTTP/1.1 200 OK
+                  Date: Sat, 01 Jun 2025 12:02:00 GMT
+                  Content-Type: application/json
+                  Content-Length: 74
+                  Content-Location: /existing.html
+                  Server: ExampleServer/1.0
+
+                  {
+                    "status": "updated",
+                    "message": "The resource was updated successfully."
+                  }
+
+
+4. DELETE - The DELETE method deletes the specified resource.
+         Request HTTP message Header section syntax:
+                  DELETE     URI     HTTP/version
+
+         Example DELETE Request HTTP message:
+                  DELETE /file.html HTTP/1.1
+                  Host: example.com
+
+         Example DELETE Request HTTP message's Response HTTP message:
+                  (No Body by default with 204: No Content Status Code)
+                  HTTP/1.1 204 No Content
+                  Date: Wed, 04 Sep 2024 10:16:04 GMT
+
+                  OR
+
+                  (With Body by default with 200: OK Status Code)
+                  HTTP/1.1 200 OK
+                  Content-Type: text/html; charset=UTF-8
+                  Date: Fri, 21 Jun 2024 14:18:33 GMT
+                  Content-Length: 1234
+
+                  <html>
+                    <body>
+                      <h1>File "file.html" deleted.</h1>
+                    </body>
+                  </html>
+
+
+Source(s):
+- https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods (mdn web docs)
+- https://www.youtube.com/watch?v=tkfVQK6UxDI&t=173s (Curious Code) (YouTube video by Curious
+  Code titled, 'HTTP Request Methods | GET, POST, PUT, DELETE')
+
+
+
+
+What are Response HTTP message Status Codes?
+Response HTTP message Status Codes indicate whether a specific Request HTTP message has
+been successfully completed or not.
+
+Response HTTP message Status Codes are grouped in 5 classes:
+1. Informational responses (100 – 199)
+2. Successful responses (200 – 299)
+3. Redirection messages (300 – 399)
+4. Client error responses (400 – 499)
+5. Server error responses (500 – 599)
+
+
+Here are some of the most common Status Codes are their meaning from each class:
+1. Informational responses (100 – 199)
+   a. 100 Continue - This interim response indicates that the client should continue the 
+      request or ignore the response if the request is already finished.
+   b. 101 Switching Protocols - This code is sent in response to an Upgrade request 
+      header from the client and indicates the protocol the server is switching to.
+
+
+2. Successful responses (200 – 299)
+   a. 200 OK - The request succeeded. The result and meaning of "success" varies on 
+      the Request HTTP message method.
+   b. 201 Created - The request succeeded, and a new resource was created as a result. 
+      This is typically the response sent after POST requests, or some PUT requests.
+   c. 204 No Content - There is no content to send for this request, but the headers 
+      are useful. The user agent may update its cached headers for this resource with 
+      the new ones.
+
+
+3. Redirection messages (300 - 399)
+   a. 301 Moved Permanently - The URL of the requested resource has been changed 
+      permanently. The new URL is given in the response.
+   b. 302 Found - This response code means that the URI of requested resource has been 
+      changed temporarily. Further changes in the URI might be made in the future, 
+      so the same URI should be used by the client in future requests.
+   c. 304 Not Modified - This is used for caching purposes. It tells the client that 
+      the response has not been modified, so the client can continue to use the same 
+      cached version of the response.
+
+
+4. Client error responses (400 - 499)
+   a. 400 Bad Request - The server cannot or will not process the request due to 
+      something that is perceived to be a client error (e.g., malformed request 
+      syntax, invalid request message framing, or deceptive request routing).
+   b. 401 Unauthorized - Although the HTTP standard specifies "unauthorized", 
+      semantically this response means "unauthenticated". That is, the client 
+      must authenticate itself to get the requested response.
+   c. 403 Forbidden - The client does not have access rights to the content; that 
+      is, it is unauthorized, so the server is refusing to give the requested 
+      resource. Unlike 401 Unauthorized, the client's identity is known to the server.
+   d. 404 Not Found - The server cannot find the requested resource. In the browser, 
+      this means the URL is not recognized. In an API, this can also mean that 
+      the endpoint is valid but the resource itself does not exist. Servers may 
+      also send this response instead of 403 Forbidden to hide the existence of a 
+      resource from an unauthorized client. This response code is probably the most 
+      well known due to its frequent occurrence on the web.
+
+
+5. Server error responses (500 - 599)
+   a. 500 Internal Server Error - The server has encountered a situation it does not 
+      know how to handle. This error is generic, indicating that the server cannot 
+      find a more appropriate 5XX status code to respond with.
+   b. 502 Bad Gateway - This error response means that the server, while working as a 
+      gateway to get a response needed to handle the request, got an invalid response.
+   c. 504 Gateway Timeout - This error response is given when the server is acting as a 
+      gateway and cannot get a response in time.
+
+
+Source(s):
+- https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status (mdn web docs)

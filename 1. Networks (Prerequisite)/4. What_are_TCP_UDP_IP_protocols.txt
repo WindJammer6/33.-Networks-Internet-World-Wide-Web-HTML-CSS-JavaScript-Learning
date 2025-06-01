@@ -1,0 +1,168 @@
+What is Transmission Control Protocol (TCP)/Internet Protocol (IP)? (from the Transport Layer)
+TCP/IP is a set of acronyms commonly seen on computers and mobile devices, that stands for Transmission Control 
+Protocol (TCP) and Internet Protocol (IP), which refers to 2 protocols, that computers use to inter-communicate 
+these days. A protocol is defined as a set of rules on how something will behave, which is exactly how these 2 sets 
+of TCP/IP protocols work, they are just a set of rules all computers follow and adhere to, thats somewhere 
+standardised and documented. 
+
+So computers use protocols all the time to govern how they are sending and receiving information 
+(inter-communication), and TCP and IP are 2 such protocols that standardise this is process.
+
+
+
+What exactly is the Internet Protocol (IP) and what are IP addresses?
+The Internet Protocol is a set of rules that enable information to be transferred from one computer to another,
+by putting a unqiue address on this 'virtual information envelope' of the destination computer, and also the
+unique address of the source computer (where the information is sent from). This unique address is also known as 
+the IP address. 
+Visualisation of a 'virtual information envelope' with IP addresses:
+-------------
+|Source IP address                                      |  
+|                                                       |  
+|               Destination IP address                  |  
+|                                                       |   
+|                                                       |
+|_______________________________________________________|
+
+
+
+What exactly is the Transmission Control Protocol (TCP) and what are TCP ports?
+The Transmission Control Protocol (TCP) is a set of rules that helps with the transfer of information, aka the 
+'virtual information envelope', from one computer to another in various ways. The 2 main features of TCP that 
+helps in doing so are:
+
+1. Now that we have our source and destination IP addresses on this 'virtual information envelope', there is 
+   another problem: How do we tell the type of information the receiving computer is receiving from this 'virtual 
+   information envelope'? Is it an email from an email server? A web page server? A Skype call? A message from a 
+   chat server? A game from a game server?
+
+    Here is where the the first feature of TCP come into play. 
+
+    This first feature of the TCP protocol allows us to specify the type of service whose data is in this envelope. 
+    It does this by adding a unique numeric identifier of the service on the 'virtual information envelope', also 
+    known as a TCP port.
+    For example:
+        TCP port (unique numeric identifier)    |               Type of service
+                     80                         |    HTTP (a webpage/request for a webpage)
+                     443                        |    HTTPS (encrypted request for a webpage)
+                  25/465/587                    |                   Email
+                     21                         |         FTP (File Transfer Protocol)
+                     22                         |             SSH (Secure Shell)
+  
+    (Note: The Internet Assigned Numbers Authority (IANA) maintains the type of service name and TCP port number 
+    registry, where you can find a comprehensive list of assigned TCP port numbers and their associated services:
+    https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)
+
+    Visualisation of a 'virtual information envelope' with IP addresses and TCP port number:
+    -------------
+    |Source IP address                                      |  
+    |                                                       |  
+    |               Destination IP address  TCP port number |  
+    |                                                       |   
+    |                                                       |
+    |_______________________________________________________|
+
+
+2. There is another problem when we are trying to tele-communicate with the 'virtual information envelope', that is:
+   What if the 'virtual information envelope' we are trying to send is very large, which is not ideal as it might
+   clog up the Internet servers?
+
+   Here is where the the second feature of TCP come into play. 
+
+   This second feature of the TCP protocol tells the computer to do Fragmentation, which is to break down the 
+   'virtual information envelope' into smaller bundles, called 'packets', and send these 'packets' individually 
+   seperately to the receiving computer. 
+   
+   To keep track of the order of these 'packets' of the 'virtual information envelope' for the reassembly of the 
+   'packets' back into the larger 'virtual information envelope' in the receiving computer, TCP protocol ensures 
+   that these 'packets' are tagged with a sequence number such as 'Packet One out of Four', 'Packet Two out of 
+   Four', ..., 'Packet Four out of Four'.
+   Visualisation of a 'packet' with IP addresses, TCP port, and sequence number
+    -------------
+    |Source IP address                                      |  
+    |                                                       |  
+    |               Destination IP address  TCP port number |  
+    |                                                       |   
+    |Sequence number (e.g. 1/4)                             |
+    |_______________________________________________________|
+
+   Process of sending and receiving large 'virtual information envelope' according to the TCP protocol:     
+                    (Fragmentation)                              (Reassembly)
+        Sending computer            ----------------------------           Receiving computer
+    ----------------------    ----> | 'Packet One out of Four' | ----    ----------------------
+    |      Large         |    |     |__________________________|    |    |      Large         |
+    |'Virtual information|----|     ----------------------------    |----|'Virtual information|
+    |     envelope'      |    |---> | 'Packet Two out of Four' | ---|    |     envelope'      |
+    |____________________|    |     |__________________________|    |    |____________________|
+                              |     ----------------------------    |
+                              |---> |'Packet Three out of Four'| ---|
+                              |     |__________________________|    |
+                              |     ----------------------------    |
+                              ----> |'Packet Four out of Four' | ----
+                                    |__________________________|
+
+   An additional (beneficial) property of this sequence number in 'packets' ensured by the TCP protocol is that it 
+   can also sort of 'gurantee' that a 'virtual information envelope' is either sent completely, or is not sent 
+   completely. Lets say that during the transmission of the 'virtual information envelope', one of its 'packets',
+   the 'Packet Three out of Four' is lost and is not received. When the receiving computers detects that not all of
+   the 'packets' are transferred due to the missing sequence number, 'Packet Three out of Four', it will then 
+   omit the 'virtual information envelope', and possibly ask the sending computer to resend the 'virtual information 
+   envelope'again.
+
+
+3. Another feature of TCP is that it is a Connection-Oriented Protocol, which means it requires a session/connection 
+   to be set up between 2 computers. So the 2 computers must verify a session/connection before any communication
+   takes place.
+
+   This verification of a session/connection process is done via a 3-way handshake:
+   a. First, the sender computer sends a message called SYN (Synchronize) to the receiver computer
+   b. Then the receiver computer replies with a message called SYN-ACK (Synchronize-Acknowledge) to the sender computer
+   c. Lastly, the sender computer replies again with a message called ACK (Acknowledge) Received to the receiver computer
+
+   Only after this, communication can take place. It is reliable.
+
+
+4. Another feature of TCP is that it gurantees the delivery of the data. So if a data packet goes astray and
+   dosen't arrive, then TCP will resend it (you can refer to the mention of 'Automatic Repeat Request scheme' in
+   the '2. What_is_the_OSI_layer_model.txt' file).
+
+
+Source(s): 
+- https://www.youtube.com/watch?v=2VauFS071pg (CS50) (YouTube video by CS50 titled, 'CS50 2021 in HDR - 
+Lecture 8 - HTML, CSS, JavaScript')
+- https://www.youtube.com/watch?v=uwoD5YsGACg&t=218s (PowerCert Animated Videos) (YouTube video by 
+PowerCert Animated Videos titled, 'TCP vs UDP Comparison')
+- https://www.geeksforgeeks.org/what-is-transmission-control-protocol-tcp/ (GeekforGeeks)
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+What is User Diagram Protocol (UDP)/Internet Protocol (IP)? (from the Transport Layer)
+1. (Same as TCP)
+
+2. Unlike TCP, UDP does not perform fragmentation or manage sequence numbers. That means:
+   - No splitting of data into ordered packets
+   - No reassembly logic on the receiving end
+   - No guarantee of delivery — the data may arrive late, out of order, or not at all!
+
+3. UDP is a Connectionless-Oriented Protocol, which means it does not requires a session/connection 
+   to be set up between 2 computers. The 2 computer immediately communicates. It is unreliable.
+
+4. UDP does not gurantee the delivery of the data. So if a data packet goes astray and
+   dosen't arrive, UDP does not do anything about it, causing fragmented data to go missing
+   in the receiver computer.
+
+
+Since UDP is so unreliable and bad, why does it exist at all?
+This is because it is fast, since it has less overhead processes like data fragmentation and
+reassembly, or verification. It is most used in cases where there is no need to gurantee all data
+to reach from the sender computer to the receiver computer, or if the amount of data needed to
+be sent is small.
+(E.g. Streaming movies, songs, games, TFTP, DNS)
+
+
+
+Source(s): 
+- https://www.youtube.com/watch?v=uwoD5YsGACg&t=218s (PowerCert Animated Videos) (YouTube video by 
+PowerCert Animated Videos titled, 'TCP vs UDP Comparison')

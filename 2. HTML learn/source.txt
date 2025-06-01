@@ -1,0 +1,5 @@
+I was too lazy to sit through many hours trying to learn about HTML
+programming language.
+
+Hence the '1. demonstration_HTML_website.html' file is created
+using ChatGPT to demonstrate HTML programming language fundamentals.

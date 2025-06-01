@@ -1,0 +1,23 @@
+What are Network Protocols?
+Network Protocols are a set of rules that are responsible for the communication of data between various 
+devices in the network. These protocols define guidelines and conventions for transmitting and receiving 
+data, ensuring efficient and reliable data communication.
+
+Each layer in the OSI layer model is actually referring to a packet of network protocols. You can
+see which network protocols belong to which layer in the same diagram of the OSI layer model here.
+   You can view a diagram of the OSI layer model of the Networking/Internet here:
+   https://i.pinimg.com/originals/3e/53/42/3e534245a610e82dd09bf17e5c828c84.jpg
+
+
+Source:
+- https://www.geeksforgeeks.org/types-of-network-protocols-and-their-uses/ (GeekforGeeks)
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+Due to the very large number of protocols in the OSI model, I will only be going in depth on 
+6 of the more common protocols (from different layers of the OSI model):
+1. TCP/IP vs UDP/IP (Transport Layer) (see the '4. What_are_TCP_UDP_IP_protocols.txt' file)
+2. DNS (Application Layer) (see the '5. What_is_DNS_protocol.txt' file)
+3. HTTP/HTTPS (Application Layer) (see the '6. What_is_HTTP_HTTPS_protocols.txt' file)

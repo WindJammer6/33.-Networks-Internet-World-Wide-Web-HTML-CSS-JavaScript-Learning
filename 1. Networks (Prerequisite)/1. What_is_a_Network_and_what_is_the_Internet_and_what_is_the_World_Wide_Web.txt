@@ -1,0 +1,93 @@
+Why when learning about HTML, CSS and Javascript, I need to know about Networks, the Internet and 
+the World Wide Web?
+Since HTML, CSS and JavaScript are programming languages for the World Wide Web, its useful to understand how 
+Networks, the Internet and the World Wide Web works.
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+
+What are Networks?
+It is defined as the connection between 2 or more computers (somehow, either using wires/cables (Ethernet) or 
+using radio waves (Wi-Fi)).
+
+The 5 Types of Networks:
+- PAN (Personal Area Network)
+- LAN (Local Area Network)
+- CAN (Campus Area Network)
+- MAN (Metropolitan Area Network)
+- WAN (Wide Area Network)
+
+                   | PAN               | LAN              | CAN      | MAN               | WAN                  
+Technology         | Bluetooth, Zigbee | Ethernet & Wi-Fi | Ethernet | FDDI, CDDI, ATM   | Leased Line, Dial-Up 
+Range              | 1–100 m           | Up to 2 km       | 1–5 km   | 5–50 km           | Above 50 km          
+Transmission Speed | Very High         | Very High        | High     | Average           | Low                  
+Ownership          | Private           | Private          | Private  | Private or Public | Private or Public    
+Maintenance        | Very Easy         | Easy             | Moderate | Difficult         | Very Difficult       
+Cost               | Very Low          | Low              | Moderate | High              | Very High      
+
+
+Source: https://www.geeksforgeeks.org/types-of-computer-networks/ (GeekforGeeks)
+
+
+(Note: 
+- What is a computer?
+  A computer is a machine/device that can be programmed to automatically carry out sequences of arithmetic 
+  or logical operations (computation). This allows it to store, manipulate, and process data according to 
+  a set of instructions
+)
+
+
+
+
+What is a (Data) Link?
+A (data) link is a single connection between 2 computers (somehow, either using wires/cables (Ethernet) or 
+using radio waves (Wi-Fi)).
+
+Hence a Network is made up of 1 or more (data) links.
+
+
+////////////////////////////////////////////////////////////////////////////////////////
+
+
+What is the Internet?
+As described by the CS50 professor, the Internet is a hardware thing, where there is a whole lot of servers out
+there, that are somehow interconnected, via physical cables, internet service prociders, via wireless connectivity
+and the like.
+
+And once you have these networks of networks of networks (combination of PANs, LANs, CANs, MANs, WANs), you have 
+the Internet.
+
+
+Rough description of the Internet's origin
+The Internet used to be something called the ARPAnet, from the Advanced Research Projects Agency, which is
+intended to only interconnect a few Universities in Utah and California, USA, where servers/computers in each
+University is somehow interconnected by wires so that people could share data. A year later, this interconnected
+web expanded to include other Universities including MIT, Harvard and others.
+
+Fast forward to today, you have a huge number of systems around the world that is on this same network, which is
+new called the Internet.
+
+
+Applications of the Internet
+The Internet is kind of like the low level plumbing/architecture, which includes all of the network technology 
+and physical cables, which allows more high level applications/services to be built on top of it.
+
+Here are some of the more important applications/services that are built on top of the Internet:
+- The World Wide Web
+- Email
+
+
+Source: https://www.youtube.com/watch?v=2VauFS071pg (CS50) (YouTube video by CS50 titled, 'CS50 2021 in HDR - 
+Lecture 8 - HTML, CSS, JavaScript')
+
+
+////////////////////////////////////////////////////////////////////////////////////////
+
+
+What is the World Wide Web (WWW)?
+The World Wide Web (WWW or simply the Web) is an information system/service that enables content sharing over the 
+Internet through user-friendly ways meant to appeal to users beyond IT specialists and hobbyists.
+
+WWW is conceptually built on top of the Internet, where the Internet is sort of the low level plumbing/architecture, 
+which includes all of the network technology and physical cables.

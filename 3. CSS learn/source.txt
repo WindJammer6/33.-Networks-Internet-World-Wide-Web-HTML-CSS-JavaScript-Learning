@@ -1,0 +1,13 @@
+I was too lazy to sit through many hours trying to learn about CSS
+programming language.
+
+Hence the '1. demonstration_CSS_styling.css' file is created
+using ChatGPT to demonstrate CSS programming language fundamentals.
+
+
+//////////////////////////////////////////////////////
+
+
+The '1.1. demonstration_HTML_website.html' file is the same as the
+'1. demonstration_HTML_website.html' file in the '2. HTML learn' 
+folder.

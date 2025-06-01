@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!-- This tells the browser this is an HTML5 document -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Character encoding -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- For responsive design on mobile -->
+
+    <title>HTML Basics Demo</title>
+    <!-- Title shown on the browser tab -->
+
+    <link rel="stylesheet" href="1. demonstration_CSS_styling.css">
+    <!-- Link to external CSS, the '1. demonstration_CSS_styling.css' file -->
+</head>
+
+<body>
+    <!-- Page content goes here -->
+
+    <h1>Main Heading (h1)</h1>
+    <p>This is a paragraph. HTML is not case sensitive, but lowercase is standard.</p>
+
+    <!-- Text formatting -->
+    <p><strong>Bold</strong>, <em>Italic</em>, <u>Underline</u>, <mark>Highlighted</mark>, <small>Small Text</small></p>
+    <p>Superscript: x<sup>2</sup>, Subscript: H<sub>2</sub>O</p>
+
+    <!-- Lists -->
+    <h2>Unordered List</h2>
+    <ul>
+        <li>Apples</li>
+        <li>Oranges</li>
+    </ul>
+
+    <h2>Ordered List</h2>
+    <ol>
+        <li>Wake up</li>
+        <li>Code</li>
+    </ol>
+
+    <!-- Links and images -->
+    <h2>Links and Images</h2>
+    <a href="https://www.google.com" target="_blank">Open Google in new tab</a><br>
+    <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+
+    <!-- Audio and Video -->
+    <h2>Media</h2>
+    <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+        Your browser does not support audio.
+    </audio>
+
+    <video controls width="250">
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support video.
+    </video>
+
+    <!-- Forms -->
+    <h2>Form</h2>
+    <form action="/submit" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="male">Male
+        <input type="radio" name="gender" value="female">Female<br><br>
+
+        <label for="car">Choose a car:</label>
+        <select id="car" name="car">
+            <option value="volvo">Volvo</option>
+            <option value="bmw">BMW</option>
+        </select><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- Table -->
+    <h2>Table</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Alice</td>
+                <td>95</td>
+            </tr>
+            <tr>
+                <td>Bob</td>
+                <td>88</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Semantic elements -->
+    <h2>Semantic HTML</h2>
+    <header>
+        <p>This is the header section</p>
+    </header>
+    <nav>
+        <a href="#">Home</a> |
+        <a href="#">About</a>
+    </nav>
+    <main>
+        <article>
+            <h3>Article Title</h3>
+            <p>Article content goes here.</p>
+        </article>
+        <section>
+            <h4>Section Title</h4>
+            <p>Some section content.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 MySite</p>
+    </footer>
+
+</body>
+</html>

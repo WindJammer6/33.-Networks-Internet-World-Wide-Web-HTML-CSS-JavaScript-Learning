@@ -1,0 +1,59 @@
+What is Domain Name System (DNS) Protocol? (from the Application Layer)
+Recall that each computer has its own unqiue IP address that identifies itself, which
+looks something like this: 
+    `192.168.1.10` 
+
+(see the '2. What_is_the_OSI_layer_model.txt' file for more information on what 
+each of the numbers mean under the Network Layer)
+
+But as a human, and if you want to tell your computer to send a message to another
+computer, its unlikely you will remember the other computer's IP address and shouldn't
+care what that other computer's IP address is right?
+
+Similar to the case where you might not remember the phone number of every single one
+of your friends, you instead look them up in some way. So what is this way?
+
+In your web browser, when you look for a website, you typically don't search something
+like this: `192.168.1.10`. What do you typically type in a web browser to look for
+a webiste?
+
+
+If you guessed a domain name, then you'll be right! You will typically look for something
+like 'Stanford.edu', 'Harvard.edu', 'gmail.com' etc.! So these are domain names!
+
+You can imagine the DNS being an external server connected to your computer via a wireless
+or wirelessly that stores a big hash table or phonebook that looks something like this which
+its whole purpose is to translate domain names to IP addresses, specifically, it translates
+Fully Qualified Domain Names (FQDN) to IP addresses:
+
+     FQDN     |                     IP address Range(s)
+ harvard.edu  | 128.103.0.0/16, 140.247.0.0/16, 65.112.0.0/20, 67.134.204.0/22                                                                                                                                                       |                                                                                           |
+ stanford.edu | 128.12.0.0/16, 171.64.0.0/14, 204.63.224.0/21                                                                                                                                                                        |                                                                                           |
+ gmail.com    | 64.233.160.0/19, 66.102.0.0/20, 66.249.80.0/20, 72.14.192.0/18, 74.125.0.0/16, 
+              | 108.177.8.0/21, 108.177.96.0/19, 172.217.0.0/19, 173.194.0.0/16, 207.126.144.0/20, 
+              | 209.85.128.0/17, 216.58.192.0/19, 216.239.32.0/19
+              
+
+
+
+Difference between Domain Names and Fully Qualified Domain Names (FQDN)
+The main difference is that the domain name is used to identify a website while FQDN is used to 
+identify a specific computer or server on the Internet.
+
+A domain name refers to a zone/namespace, representing an organization or websit, while a FQDN 
+is a complete name pointing to a specific host (computer/server) inside the domain.
+
+Multiple computers can share the same domain name, but each one will have its own FQDN.
+ FQDN                     | Role           
+ `www.harvard.edu`         | Main web server
+ `mail.harvard.edu`        | Email server   
+ `cs.harvard.edu`          | Computer science department site
+ `vpn.harvard.edu`         | VPN server     
+ `student1.cs.harvard.edu` | Student’s personal machine or lab server
+
+
+Source(s): 
+- https://www.youtube.com/watch?v=2VauFS071pg (CS50) (YouTube video by CS50 titled, 'CS50 2021 in HDR - 
+  Lecture 8 - HTML, CSS, JavaScript')
+- https://www.websitebuilderpoint.net/what-is-the-difference-between-domain-name-and-fqdn/ (Website 
+  Builder Reviews)

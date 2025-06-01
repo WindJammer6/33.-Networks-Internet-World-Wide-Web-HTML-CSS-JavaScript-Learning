@@ -1,0 +1,16 @@
+What is a Server?
+A Server is a computer that awaits requests (data) from a Client. It processes that request (data) (somehow
+via some program), and then sends that processed request (data) as a response back to the Client.
+
+What is a Client?
+A Client is a computer that sends requests (data) to a Server. After the Server processes their request (data),
+the Client will receive it from the Server.
+
+(Note: 
+- What is a computer?
+  A computer is a machine/device that can be programmed to automatically carry out sequences of arithmetic 
+  or logical operations (computation). This allows it to store, manipulate, and process data according to 
+  a set of instructions
+
+- A computer can act as both the Server and Client as the same time!
+)

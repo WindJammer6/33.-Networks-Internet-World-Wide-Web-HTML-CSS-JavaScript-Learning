@@ -1,0 +1,47 @@
+Setting up HTML, CSS and JavaScript in VSCode:
+- VSCode already has built-in support for HTML and CSS, hence there is no need
+  for additional steps to set them up in VSCode
+- VSCode does not have built-in support for JavaScript, here is how we set it up
+  in VSCode:
+  -> Source: 
+     https://www.youtube.com/watch?v=bEIkw5dG-E4&t=270s (HMA WebDesign) (YouTube 
+     video by HMA WebDesign titled, 'How To Run JavaScript Program in Visual 
+     Studio Code | VSCode Terminal Not Working')
+
+
+//////////////////////////////////////////////////////////////////////////////
+
+
+How to run HTML, CSS and JavaScript code in VSCode:
+1. Running HTML in VS Code
+   a. Download the Live Server Extension on VSCode by Ritwick Dey
+   b. Open or Create an .html file.
+   c. Right-click anywhere in the file → Select “Open with Live Server”.
+   d. Your browser will open the page and auto-refresh when you save changes.
+
+
+2. Running CSS in VS Code
+   a. Link your CSS in the HTML file:
+       E.g. <link rel="stylesheet" href="styles.css">
+   b. Run the HTML file with Live Server to see the CSS styles applied live.
+       (see point 1 above)
+
+
+3. Running JavaScript in VS Code
+   Option 1: In the Browser (for web JS)
+   a. Link your .js file in HTML:
+      E.g. <script src="script.js"></script>
+   b. Run the HTML file with Live Server to see the JavaScript code applied live.
+       (see point 1 above)
+
+   Option 2: In Terminal (for backend or standalone JS)
+   a. Open or create a .js file.
+   b. Open terminal (`Ctrl + ``) and run this in the command line:
+            node filename.js
+    
+   Option 3: Using the Code Runner extension
+   a. Install Code Runner extension
+   b. Press Ctrl + Alt + N.
+
+
+Source: https://datatas.com/how-to-run-html-css-and-javascript-in-visual-studio-code/ (DATATAS)
