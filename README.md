@@ -22,8 +22,16 @@ Here is a directory to the explanations of what each folder contains in this Net
 ## [1. Network (Prerequisites)](https://github.com/WindJammer6/33.-Networks-Internet-World-Wide-Web-HTML-CSS-JavaScript-Learning/tree/main/1.%20Networks%20(Prerequisite)) <a name = "networks"></a> 🌐🕸️
 
 This folder contains all the files that goes through some foundational theory on Networks, the Internet and the World Wide Web including:
-+ Open Systems Interconnection (OSI) layer model
-+ Some of the most Network Protocols
++ Open Systems Interconnection (OSI) 7 layer model
+  + Application Layer
+  + Presentation Layer
+  + Session Layer
+  + Transport Layer
+  + Network Layer
+  + Data Link Layer
+  + Physical Layer
+
++ Some of the most common Network Protocols
   + TCP, UDP, IP
   + DNS
   + HTTP, HTTPS ('GET', 'POST', 'PUT', 'DELETE' HTTP Request methods, Status Codes)
