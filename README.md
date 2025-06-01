@@ -21,58 +21,20 @@ Here is a directory to the explanations of what each folder contains in this Net
 
 ## [1. Network (Prerequisites)](https://github.com/WindJammer6/33.-Networks-Internet-World-Wide-Web-HTML-CSS-JavaScript-Learning/tree/main/1.%20Networks%20(Prerequisite)) <a name = "networks"></a> 🌐🕸️
 
-This folder contains all the MySQL (SQL implementation) files during my SQL programming language with MySQL (SQL implementation) learning journey segregated into 3 folders, '[2. MySQL (SQL implementation) basic syntax](https://github.com/WindJammer6/23.-SQL-learn-with-MySQL-SQL-implementation-/tree/main/SQL%20learn%20with%20My%20SQL%20(SQL%20implementation)%20code%20archives/2.%20MySQL%20(SQL%20implementation)%20basic%20syntax)', '[3. MySQL (SQL implementation) modifying Relational Databases](https://github.com/WindJammer6/23.-SQL-learn-with-MySQL-SQL-implementation-/tree/main/SQL%20learn%20with%20My%20SQL%20(SQL%20implementation)%20code%20archives/3.%20MySQL%20(SQL%20implementation)%20modifying%20Relational%20Databases)' and '[4. MySQL (SQL implementation) integrated with Python (as backend) using PyMySQL (Python library)](https://github.com/WindJammer6/23.-SQL-learn-with-MySQL-SQL-implementation-/tree/main/SQL%20learn%20with%20My%20SQL%20(SQL%20implementation)%20code%20archives/4.%20MySQL%20(SQL%20implementation)%20integrated%20with%20Python%20(as%20backend)%20using%20PyMySQL%20(Python%20library))', organised based on the programming concept of each MySQL (SQL implementation) file. Most of the information from the first and second folders, '[2. MySQL (SQL implementation) basic syntax](https://github.com/WindJammer6/23.-SQL-learn-with-MySQL-SQL-implementation-/tree/main/SQL%20learn%20with%20My%20SQL%20(SQL%20implementation)%20code%20archives/2.%20MySQL%20(SQL%20implementation)%20basic%20syntax)' and '[3. MySQL (SQL implementation) modifying Relational Databases](https://github.com/WindJammer6/23.-SQL-learn-with-MySQL-SQL-implementation-/tree/main/SQL%20learn%20with%20My%20SQL%20(SQL%20implementation)%20code%20archives/3.%20MySQL%20(SQL%20implementation)%20modifying%20Relational%20Databases)', is taken from this Youtube playlist: https://www.youtube.com/playlist?list=PL41lfR-6DnOokmJfmYj2hdVMKVGIcF7__ (Quentin Watt Tutorials) and the information from the third folder is taken from these Youtube videos: https://www.youtube.com/watch?v=3vsC05rxZ8c&list=PLzMcBGfZo4-l5kVSNVKGO60V6RkXAVtp-&index=1 (Tech with Tim) and https://www.youtube.com/watch?v=91iNR0eG8kE&list=PLzMcBGfZo4-l5kVSNVKGO60V6RkXAVtp-&index=2 (Tech with Tim). While in all 3 folders I split the respective lessons myself to the individual folders.
-
-This folder also contains 1 text files, ['1. About_these_MySQL_(SQL_implentation)_tutorials.txt' text file](https://github.com/WindJammer6/23.-SQL-learn-with-MySQL-SQL-implementation-/blob/main/SQL%20learn%20with%20My%20SQL%20(SQL%20implementation)%20code%20archives/1.%20About_these_MySQL_(SQL_implentation)_tutorials.txt), 1 MySQL (SQL implementation) file, ['MySQL_(SQL_implementation)_query_that_creates_the_movies_relational_database_in_a_MySQL_(SQL_implementation)_server.sql' SQL file](https://github.com/WindJammer6/23.-SQL-learn-with-MySQL-SQL-implementation-/blob/main/SQL%20learn%20with%20My%20SQL%20(SQL%20implementation)%20code%20archives/MySQL_(SQL_implementation)_query_that_creates_the_movies_relational_database_in_a_MySQL_(SQL_implementation)_server.sql), and 1 Microsoft Excel file, ['movies_relational_database_visual_in_Microsoft_Excel.xlsx' Microsoft Excel file](https://github.com/WindJammer6/23.-SQL-learn-with-MySQL-SQL-implementation-/blob/main/SQL%20learn%20with%20My%20SQL%20(SQL%20implementation)%20code%20archives/movies_relational_database_visual_in_Microsoft_Excel.xlsx).
-
-<br>
-
-However, I did have some deviation for these tutorial folders from their sources:  
-
-For deviation for the first and second tutorial folders from the Youtube playlist by Quentin Watt Tutorials, titled 'MySQL for Beginners':  
-- In the Youtube playlist by Quentin Watt Tutorials, titled 'MySQL for Beginners' used MAMP and PHP as the
-  IDE, but I used VScode instead (refer to the file 'Setting_up_MySQL_(SQL_implementation)_in_VScode.txt' for how to set 
-  up MySQL with VScode).
-- In the Youtube playlist by Quentin Watt Tutorials, titled 'MySQL for Beginners' used a pre-made Relational Database by 
-  Quentin, but I used a 'moviesdb' Relational Database provided by codebasics in their Youtube video, titled 'SQL Tutorial 
-  for Beginners | MySQL Tutorial' (link: https://youtu.be/Rm0xH2Vpfi0?si=QVr3mUdqUGLHN84R)
-
-For deviation for the third tutorial folder from the Youtube videos by Tech with Tim, titled 'Python MySQL Tutorial - Setup & Basic Queries (w/ MySQL Connector)' and 'Python MySQL Tutorial - Creating Tables, Inserting & Selecting':  
-- In these Youtube videos by Tech with Tim, titled 'Python MySQL Tutorial - Setup & Basic Queries (w/ MySQL Connector)' and 'Python MySQL Tutorial - Creating Tables, Inserting & Selecting' used 
-  the 'mysql.connector' (Python library), but it dosen't work for my computer for some reason so I used the PyMySQL (Python library) instead, which works for my computer and is relatively 
-  similar to the 'mysql.connector' (Python library) in functionality and syntax.
-
-*How to use the MySQL (SQL implementation) files in this folder?*  
-The MySQL (SQL implementation) files in this folder can only be used after setting up VS code, where instructions can be found from the '[3. 'Setting_up_MySQL_(SQL_implementation)_in_VScode.txt' text file)](https://github.com/WindJammer6/23.-SQL-learn-with-MySQL-SQL-implementation-/blob/main/Setting_up_MySQL_(SQL_implementation)_in_VScode.txt)', setting up the 'moviesdb' MySQL (SQL implementation) Relational Database in a MySQL (SQL implementation) server in the 'MySQL WorkBench' MySQL-specific MySQL (SQL implementation) server management tool/IDE/application, and running these MySQL (SQL implementation) files, where instructions can be found from the '[4. 'How_to_set_up_a_Relational_Database_in_an_empty_MySQL_(SQL implementation)_server_and_how_to_run_MySQL_(SQL_implementation)_queries_in_VScode.txt' text file](https://github.com/WindJammer6/23.-SQL-learn-with-MySQL-SQL-implementation-/blob/main/How_to_set_up_a_Relational_Database_in_an_empty_MySQL_(SQL%20implementation)_server_and_how_to_run_MySQL_(SQL_implementation)_queries_in_VScode)'.
-
-<br> 
-
-**[1. 'About_these_MySQL_(SQL_implentation)_tutorials.txt' text file](https://github.com/WindJammer6/23.-SQL-learn-with-MySQL-SQL-implementation-/blob/main/SQL%20learn%20with%20My%20SQL%20(SQL%20implementation)%20code%20archives/1.%20About_these_MySQL_(SQL_implentation)_tutorials.txt) <a name = "mysqlabouttutorials"></a>**  
-This file contains information about these MySQL (SQL implementation) files, the sources of the information they are taken from: https://www.youtube.com/playlist?list=PL41lfR-6DnOokmJfmYj2hdVMKVGIcF7__ (Quentin Watt Tutorials), https://www.youtube.com/watch?v=3vsC05rxZ8c&list=PLzMcBGfZo4-l5kVSNVKGO60V6RkXAVtp-&index=1 (Tech with Tim) and 
-https://www.youtube.com/watch?v=91iNR0eG8kE&list=PLzMcBGfZo4-l5kVSNVKGO60V6RkXAVtp-&index=2 (Tech with Tim) and the deviations of these MySQL (SQL implementation) files from it (see above in the section 'However, I did have some deviation for these tutorial folders from their sources').
-
-**[2. MySQL (SQL implementation) basic syntax](https://github.com/WindJammer6/23.-SQL-learn-with-MySQL-SQL-implementation-/tree/main/SQL%20learn%20with%20My%20SQL%20(SQL%20implementation)%20code%20archives/2.%20MySQL%20(SQL%20implementation)%20basic%20syntax) <a name = "mysqlbasics"></a>**  
-This folder contains all the MySQL (SQL implementation) files that deals with the basic syntax and structure in the SQL programming language with MySQL (SQL implementation).
-
-**[3. MySQL (SQL implementation) modifying Relational Databases](https://github.com/WindJammer6/23.-SQL-learn-with-MySQL-SQL-implementation-/tree/main/SQL%20learn%20with%20My%20SQL%20(SQL%20implementation)%20code%20archives/3.%20MySQL%20(SQL%20implementation)%20modifying%20Relational%20Databases) <a name = "mysqlmodifyingrdb"></a>**  
-This folder contains all the MySQL (SQL implementation) files that deals with modifying Relational Databases (aka SQL Databases), in the SQL programming language with MySQL (SQL implementation).
-
-**[4. MySQL (SQL implementation) integrated with Python (as backend) using PyMySQL (Python library)](https://github.com/WindJammer6/23.-SQL-learn-with-MySQL-SQL-implementation-/tree/main/SQL%20learn%20with%20My%20SQL%20(SQL%20implementation)%20code%20archives/4.%20MySQL%20(SQL%20implementation)%20integrated%20with%20Python%20(as%20backend)%20using%20PyMySQL%20(Python%20library)) <a name = "mysqlmoviesrdbexcel"></a>**  
-This folder contains all the MySQL (SQL implementation) files that deals with the integration of the SQL programming language with MySQL (SQL implementation) to Python (as backend) using the [PyMySQL (Python library)](https://pypi.org/project/PyMySQL/).
-
-**['MySQL_(SQL_implementation)_query_that_creates_the_movies_relational_database_in_a_MySQL_(SQL_implementation)_server.sql' MySQL (SQL implementation) file](https://github.com/WindJammer6/23.-SQL-learn-with-MySQL-SQL-implementation-/blob/main/SQL%20learn%20with%20My%20SQL%20(SQL%20implementation)%20code%20archives/MySQL_(SQL_implementation)_query_that_creates_the_movies_relational_database_in_a_MySQL_(SQL_implementation)_server.sql) <a name = "mysqlmoviesrdb"></a>**  
-This file contains the MySQL (SQL implementation) file, that when run, creates the 'moviesdb' Relational Database provided by codebasics in their Youtube video, titled 'SQL Tutorial for Beginners | MySQL Tutorial' (link: https://youtu.be/Rm0xH2Vpfi0?si=QVr3mUdqUGLHN84R) in a MySQL (SQL implementation) server in MySQL Workbench, a MySQL-specific MySQL (SQL implementation) server management tool/IDE/application (see the section below '3. 'Setting_up_MySQL_(SQL_implementation)_in_VScode.txt' text file' for more detail on what MySQL Workbench is).
-
-**['movies_relational_database_visual_in_Microsoft_Excel.xlsx' Microsoft Excel file](https://github.com/WindJammer6/23.-SQL-learn-with-MySQL-SQL-implementation-/blob/main/SQL%20learn%20with%20My%20SQL%20(SQL%20implementation)%20code%20archives/movies_relational_database_visual_in_Microsoft_Excel.xlsx) <a name = "mysqlmoviesrdbexcel"></a>**  
-This file contains the Microsoft Excel file, that illustrates/visualises the 'moviesdb' Relational Database provided by codebasics in their Youtube video, titled 'SQL Tutorial for Beginners | MySQL Tutorial' (link: https://youtu.be/Rm0xH2Vpfi0?si=QVr3mUdqUGLHN84R) in a Microsoft Excel.
-
-<br>
+This folder contains all the files that goes through some foundational theory on Networks, the Internet and the World Wide Web including:
++ Open Systems Interconnection (OSI) layer model
++ Some of the most Network Protocols
+  + TCP, UDP, IP
+  + DNS
+  + HTTP, HTTPS ('GET', 'POST', 'PUT', 'DELETE' HTTP Request methods, Status Codes)
 
 *Source(s):*  
-+ https://www.youtube.com/playlist?list=PL41lfR-6DnOokmJfmYj2hdVMKVGIcF7__ (Youtube playlist by Quentin Watt Tutorials, titled 'MySQL for Beginners')
-+ https://www.youtube.com/watch?v=3vsC05rxZ8c&list=PLzMcBGfZo4-l5kVSNVKGO60V6RkXAVtp-&index=1 (Youtube video by Tech with Tim, titled: 'Python MySQL Tutorial - Setup & Basic Queries (w/ MySQL Connector)')
-+ https://www.youtube.com/watch?v=91iNR0eG8kE&list=PLzMcBGfZo4-l5kVSNVKGO60V6RkXAVtp-&index=2 (Youtube video by Tech with Tim, titled: 'Python MySQL Tutorial - Creating Tables, Inserting & Selecting')
-  
++ https://www.youtube.com/watch?v=2VauFS071pg (CS50) (YouTube video by CS50 titled, 'CS50 2021 in HDR - Lecture 8 - HTML, CSS, JavaScript')
++ https://www.youtube.com/watch?v=vv4y_uOneC0&t=2s (TechTerms) (YouTube video by TechTerms titiled, 'OSI Model Explained | OSI Animation | Open System Interconnection Model | OSI 7 layers | TechTerms')
++ https://www.youtube.com/watch?v=uwoD5YsGACg&t=218s (PowerCert Animated Videos) (YouTube video by PowerCert Animated Videos titled, 'TCP vs UDP Comparison')
++ https://www.youtube.com/watch?v=tkfVQK6UxDI&t=173s (Curious Code) (YouTube video by Curious Code titled, 'HTTP Request Methods | GET, POST, PUT, DELETE')
++ etc. (see inside the files for the respective sources for each information)
+
 <br>
 
 ## [2. HTML learn](https://github.com/WindJammer6/33.-Networks-Internet-World-Wide-Web-HTML-CSS-JavaScript-Learning/tree/main/2.%20HTML%20learn) <a name = "html"></a> ![My Skills](https://go-skill-icons.vercel.app/api/icons?i=html)
