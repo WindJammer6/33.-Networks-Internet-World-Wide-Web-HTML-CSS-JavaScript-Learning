@@ -34,7 +34,9 @@ This folder contains all the files that goes through some foundational theory on
 + Some of the most common Network Protocols
   + TCP, UDP, IP
   + DNS
-  + HTTP, HTTPS ('GET', 'POST', 'PUT', 'DELETE' HTTP Request methods, Status Codes)
+  + HTTP, HTTPS
+     + HTTP Request methods ('GET', 'POST', 'PUT', 'DELETE' HTTP Request methods)
+     + Status Codes
 
 *Source(s):*  
 + https://www.youtube.com/watch?v=2VauFS071pg (CS50) (YouTube video by CS50 titled, 'CS50 2021 in HDR - Lecture 8 - HTML, CSS, JavaScript')
