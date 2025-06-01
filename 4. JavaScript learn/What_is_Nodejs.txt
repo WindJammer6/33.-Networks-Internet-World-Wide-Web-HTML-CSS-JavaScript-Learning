@@ -1,0 +1,69 @@
+What is Node.js?
+Without Node.js in the past:
+In the past, HTML, CSS and JavaScript programming languages are only unique to the 
+World Wide Web, and can only be used for web browsers (Client). i.e. This means, back then, 
+HTML, CSS and JavaScript can only be used to build web browser Clients (frontend), and are
+front-end programming languages only! It cannot be used to make Servers (backend).
+
+You can only run JavaScript programs within a web browser (Client) (frontend) like 
+Firefox and Chrome back then.
+
+But this all changed with Node.js!
+
+
+
+With Node.js in the present:
+Node.js is an open-source and cross-platform JavaScript runtime environment. 
+
+Node.js allows you to run a JavaScript programs outside of a web browser (Client) (frontend), 
+which hence allows you to create Servers (backend) with JavaScript! This means, with
+Node.js, JavaScript becomes both a front-end and back-end programming language!
+
+Node.js does this by running the V8 engine which is the core of Google Chrome outside
+a web browser, hence allowing front-end developers (whose technology stack usually
+only consists of HTML, CSS and JavaScript, to use JavaScript to build Server-side
+applciations (back-end) with a programming language (JavaScript) that they are familiar with
+instead of learning a new one)
+
+
+
+Importing modules/packages/libraries/frameworks on JavaScript thanks to Node.js:
+In the past, it would have never been possible to importing modules/packages/libraries/frameworks
+help on JavaScript code since it was just a front-end programming language. But thanks to 
+Node.js, this is now possible.
+
+Node.js allows you to use NPM (Node Package Manager), which is the easiest and 
+fastest way to use JavaScript modules. 
+
+A module is a block of code that can do something (equivalent to a library in other programming
+languages such as Python and Java), for example, if someone has written JavaScript
+code to build a Calender, a Chart, or a Table, each one of them can be considered a module.
+(Note: a package is defined as a group of modules!)
+
+So if you want to add a Calender, a Chart, or a Table into your JavaScript code, you can just
+install the relevant modules/package with NPM in Node.js, and integrate them into your JavaScript
+code.
+
+There are many popular modules/packages/libraries/frameworks that are arising in popularity
+and are extremely useful such as:
+- React
+- Express.js
+- Next.js
+- Nest.js
+- Angular
+- etc.
+
+that are all possible thanks to Node.js!
+
+
+(Note:
+ What is a Runtime Environment?
+ A Runtime Environment is the environment in which a program or an application is 
+ executed.
+)
+
+
+
+Source(s):
+- https://www.youtube.com/watch?v=q-xS25lsN3I&t=121s (Code ON 코드온) (YouTube video by
+  Code ON 코드온 titled, 'What is Node.js and how it works (explained in 2 minutes)')
